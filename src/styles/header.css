@@ -1,0 +1,19 @@
+/* Шапка: логотип и меню */
+header{position:fixed;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:18px 28px;z-index:5;pointer-events:none}
+header>*{pointer-events:auto}
+.brand{font-weight:800;letter-spacing:.02em;font-size:18px;display:flex;gap:10px;align-items:center}
+.brand i{font-style:normal;font-family:var(--mono);color:var(--accent)}
+nav{display:flex;gap:6px;background:var(--glass);border:1px solid var(--line);border-radius:999px;padding:5px;}
+nav button{font:600 14px var(--sans);color:var(--ink);background:none;border:0;padding:9px 15px;border-radius:999px;cursor:pointer;transition:.2s}
+nav button:hover,nav button:focus-visible{background:rgba(255,255,255,.1);outline:none}
+nav button.cta{background:var(--accent);color:#1c1226}
+nav button.cta:hover{background:#ffc98d}
+header nav{transition:opacity .3s}
+body.zoomed header nav{opacity:0;pointer-events:none}
+
+/* Переключатель языка */
+.lang{display:flex;gap:2px;background:var(--glass);border:1px solid var(--line);border-radius:999px;padding:4px;transition:opacity .3s}
+.lang button{font:700 12px var(--mono);letter-spacing:.04em;color:var(--ink);opacity:.6;background:none;border:0;padding:7px 11px;border-radius:999px;cursor:pointer;transition:.2s}
+.lang button:hover,.lang button:focus-visible{opacity:1;outline:none}
+.lang button.on{background:var(--accent);color:#1c1226;opacity:1}
+body.zoomed .lang{opacity:0;pointer-events:none}

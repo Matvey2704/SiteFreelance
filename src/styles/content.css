@@ -1,0 +1,25 @@
+/* Содержимое разделов: карточки, чипы, цены, контакты */
+.card h2{font-size:30px;font-weight:800;margin-bottom:6px}
+.card .lead{color:var(--muted);margin-bottom:22px;line-height:1.55}
+.mono{font-family:var(--mono)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chips span{font:400 13px var(--mono);border:1px solid var(--line);border-radius:8px;padding:6px 10px;color:var(--cyan);background:rgba(123,224,255,.06)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.item{border:1px solid var(--line);border-radius:16px;padding:18px;background:rgba(255,255,255,.03)}
+.item .thumb{height:110px;border-radius:10px;margin-bottom:14px;display:grid;place-items:center;font:700 13px var(--mono);color:rgba(255,255,255,.85)}
+.item h3{font-size:17px;margin-bottom:6px}
+.item p{font-size:14px;color:var(--muted);line-height:1.5}
+.item .meta{margin-top:10px;font:400 12px var(--mono);color:var(--accent)}
+.item.wide{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px 28px;align-items:center;justify-content:space-between}
+.price{font:800 26px var(--sans);margin:8px 0}
+.price small{font:400 13px var(--mono);color:var(--muted);white-space:nowrap}
+.price .pre{font:600 14px var(--sans);color:var(--muted)}
+.item ul{padding-left:18px;color:var(--muted);font-size:14px;line-height:1.7}
+.contacts a.big{display:flex;justify-content:space-between;align-items:center;text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-bottom:10px;background:rgba(255,255,255,.03);transition:.2s}
+.contacts a.big:hover{border-color:var(--accent);background:rgba(255,184,107,.08)}
+.contacts a.big span{font:400 13px var(--mono);color:var(--muted)}
+.note{font:400 12px var(--mono);color:var(--muted);margin-top:14px}
+.item p.term{margin:0 0 8px;color:var(--accent);font:400 12px var(--mono)}
+/* английские подписи длиннее: чуть компактнее цена, чтобы «/ project» не переносилось */
+html[lang="en"] .item .price{font-size:24px}
+html[lang="en"] .price .pre{font-size:13px}

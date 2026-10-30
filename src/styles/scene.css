@@ -1,0 +1,12 @@
+/* Сцена: размеры, интерактивные объекты */
+#scene{position:fixed;inset:0;width:100vw;height:100vh;display:block}
+.hot{cursor:pointer}
+.neon{transition:opacity .2s}
+.neon:hover text{stroke:#c8f4ff}
+.hot .bezel{transition:stroke .25s,filter .25s}
+.hot:hover .bezel,.hot:focus-visible .bezel{stroke:var(--cyan);filter:drop-shadow(0 0 14px rgba(123,224,255,.65))}
+.hot,.hot:focus{outline:none}
+body.moving #scene{pointer-events:none}
+body.zoomed #scene .hot{pointer-events:none}
+body.moving #scene [filter]{filter:none}
+body.moving #scene *{animation-play-state:paused!important}

@@ -1,0 +1,4 @@
+/* Плёнка и виньетка поверх сцены */
+.fx{position:fixed;inset:0;pointer-events:none;z-index:2}
+.vig{background:radial-gradient(ellipse at 50% 45%,transparent 55%,rgba(0,0,0,.55) 100%)}
+.grain{background-size:200px 200px;opacity:.9}
